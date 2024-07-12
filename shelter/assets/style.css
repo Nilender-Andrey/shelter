@@ -1,0 +1,280 @@
+@font-face {
+  font-family: 'Arial';
+  src: url('./fonts/arial/arial-regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url('./fonts/georgia/georgia-regular.ttf');
+  font-weight: 400;
+}
+
+:root {
+  --color-primary: #f1cdb3;
+
+  --color-light-s: #fafafa;
+  --color-light-l: #f6f6f6;
+  --color-light-xl: #ffffff;
+
+  --color-dark-s: #cdcdcd;
+  --color-dark-m: #b2b2b2;
+  --color-dark-l: #545454;
+  --color-dark-xl: #4c4c4c;
+  --color-dark-3xl: #292929;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+.title,
+h5 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 35.2px;
+}
+
+h2 {
+  font-size: 44px;
+  line-height: 57.2px;
+  letter-spacing: 0;
+}
+
+.title--style-h3 {
+  font-size: 35px;
+  line-height: 45px;
+}
+
+.title--style-h4 {
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.title--style-h5 {
+  font-size: 15px;
+  line-height: 16.5px;
+}
+
+p,
+.hint {
+  font-family: Arial;
+  font-weight: 400;
+}
+
+.text {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.hint {
+  font-size: 12px;
+  font-style: italic;
+  line-height: 18px;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+}
+
+img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.header {
+  position: absolute;
+  top: 30px;
+
+  width: 100%;
+  padding: 0 40px;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 60px;
+}
+
+.logo__title {
+  margin-bottom: 9px;
+
+  color: var(--color-primary);
+}
+
+.logo__subtitle {
+  padding-left: 4px;
+
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--color-light-xl);
+  letter-spacing: 0.1em;
+}
+
+.nav-list {
+  display: flex;
+  gap: 36px;
+}
+
+.nav-list__item {
+  list-style: none;
+}
+
+.link {
+  font-size: 15px;
+  line-height: 24px;
+  text-decoration: none;
+
+  transition: all 0.15s linear;
+}
+
+.nav-list__item--active {
+  border-bottom: 3px solid var(--color-primary);
+  pointer-events: none;
+}
+
+.nav--style-primary .link {
+  color: var(--color-dark-s);
+}
+
+.nav--style-primary .nav-list__item--active .link,
+.nav--style-primary .link:hover {
+  color: var(--color-light-s);
+}
+
+.nav--style-secondary .link,
+.nav--style-secondary .nav-list__item--active .link {
+  color: var(--color-dark-l);
+}
+
+.nav--style-secondary .link:hover {
+  color: var(--color-dark-3xl);
+}
+
+.section {
+  padding: 0 40px;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.button {
+  width: fit-content;
+  padding: 14px 45px;
+  border-radius: 100px;
+
+  font-family: Georgia;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+
+  transition: all 0.15s linear;
+}
+
+.button--style-primary {
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-primary);
+}
+
+.button--style-primary:hover {
+  background-color: var(--color-light-s);
+}
+
+.button--style-secondary {
+  background-color: inherit;
+  border: 2px solid var(--color-primary);
+}
+
+.button--style-secondary:hover {
+  background-color: var(--color-primary);
+}
+
+.footer {
+  padding: 40px 40px 0 40px;
+
+  background: url('../assets/img/footer-gradient-background.jpg') no-repeat;
+  background-size: cover;
+}
+.footer-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 280px) minmax(0, 300px) minmax(0, 300px);
+  grid-column-gap: 160px;
+}
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer-locations {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.footer-contacts__title,
+.footer-locations__title {
+  padding-top: 17px;
+  color: var(--color-light-xl);
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  text-decoration: none;
+  transition: all 0.15s linear;
+}
+
+.footer-location__icon {
+  flex-shrink: 0;
+}
+
+.footer-link:hover .footer-contact__title {
+  color: var(--color-light-s);
+}
+
+.footer-link path {
+  fill: var(--color-primary);
+}
+
+.footer-link:hover path {
+  fill: var(--color-light-s);
+}
+
+.footer-contact__title {
+  color: var(--color-primary);
+}
+
+.footer__image {
+  display: flex;
+  align-items: end;
+}
