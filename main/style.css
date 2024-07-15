@@ -1,18 +1,15 @@
-.start-screen {
+.not-only {
   background: url('../assets/img/start-screen-gradient-background.jpg') no-repeat;
   background-size: cover;
 }
 
-.start-screen {
-  padding-top: 180px;
-}
-
-.start-screen-wrapper {
+.not-only-wrapper {
   display: flex;
   gap: 42px;
+  padding: 180px 40px 0;
 }
 
-.start-screen-content {
+.not-only-content {
   flex-shrink: 2;
 
   display: flex;
@@ -24,29 +21,22 @@
   max-width: 460px;
 }
 
-.start-screen-content__heading {
+.not-only-content__heading {
   max-width: 310px;
   color: var(--color-light-xl);
 }
 
-.start-screen-content__text {
+.not-only-content__text {
   color: var(--color-dark-s);
 }
 
-.start-screen-image {
+.start-screen__image {
   flex-shrink: 1;
 
   display: flex;
   justify-content: center;
   align-items: end;
   flex-basis: 698px;
-}
-
-.about,
-.pets,
-.help,
-.donation {
-  padding: 80px 40px 100px;
 }
 
 .about-wrapper {
@@ -56,7 +46,7 @@
   gap: 120px;
 }
 
-.about-image {
+.about__image {
   flex-basis: 300px;
   max-height: 408px;
 }
@@ -68,11 +58,11 @@
   gap: 25px;
 }
 
-.about-content__heading {
+.about__heading {
   max-width: 370px;
 }
 
-.about-content__text {
+.about__text {
   color: var(--color-dark-xl);
 }
 
@@ -87,85 +77,29 @@
   align-items: center;
   gap: 60px;
 }
+.pets-wrapper {
+  gap: 61px;
+}
 
 .pets__heading,
 .help__heading {
   text-align: center;
 }
 
-.slider-pets {
+.slider {
   display: grid;
-  grid-template-columns: minmax(64px, 105px) 1fr minmax(64px, 105px);
+  grid-template-columns: minmax(52px, 1fr) minmax(270px, 990px) minmax(52px, 1fr);
   align-items: center;
+  gap: 12px;
 
   width: 100%;
 }
 
-.slider-pets-items {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.slider-pets-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-
-  width: 270px;
-  height: 435px;
-  padding-bottom: 30px;
-
-  background-color: var(--color-light-s);
-  border-radius: 9px;
-
+.slider__cards {
   overflow: hidden;
-  cursor: pointer;
-  transition: all 0.15s linear;
-}
-.slider-pets-item:hover {
-  background-color: var(--color-light-xl);
-  box-shadow: 0px 2px 35px 14px #0d0d0d0a;
 }
 
-.slider-pets-item:hover .button {
-  background-color: var(--color-primary);
-}
-
-.slider-pets-item__image {
-  width: 270px;
-  height: 270px;
-}
-
-.slider-pets-item__name {
-  font-family: Georgia;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 22.72px;
-  letter-spacing: 0.06em;
-  text-align: center;
-}
-
-.slider-pets__arrow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 52px;
-  height: 52px;
-
-  border-radius: 50%;
-  padding: 0;
-}
-
-.slider-pets__arrow img {
-  width: 14px;
-  height: 6px;
-}
-
-.slider-pets__arrow--direction-right {
+.slider__arrow--direction-right {
   margin-left: auto;
 }
 
@@ -206,7 +140,7 @@
   margin: 0 auto;
 }
 
-.donation-image {
+.donation__image {
   flex-basis: 505px;
   max-height: 261px;
 }
@@ -218,24 +152,24 @@
   gap: 20px;
 }
 
-.donation-content__button {
+.donation__link {
   display: flex;
   align-items: center;
   gap: 15px;
 
   width: 350px;
   height: 43px;
-  padding: 10px 13px 10px 15px;
+  padding: 10px 10px 10px 14px;
 
   border-radius: 9px;
   color: var(--color-dark-l);
 }
 
-.donation-content__button img {
-  width: 30px;
+.donation__link img {
+  width: 29px;
   height: 23px;
 }
 
-.donation-content__hint {
+.donation__hint {
   color: var(--color-dark-m);
 }
