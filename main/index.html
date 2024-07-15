@@ -21,32 +21,34 @@
 
   <body>
     <header class="header">
-      <div class="header-wrapper content-wrapper">
-        <div class="logo">
+      <div class="header-wrapper">
+        <a
+          href=""
+          class="logo">
           <h1 class="logo__title">Cozy House</h1>
           <div class="logo__subtitle">Shelter for pets in Boston</div>
-        </div>
+        </a>
 
         <nav class="nav nav--style-primary">
           <ul class="nav-list">
             <li class="nav-list__item nav-list__item--active">
               <a
                 class="nav-list__link link"
-                href="#about"
+                href=""
                 >About the shelter</a
               >
             </li>
             <li class="nav-list__item">
               <a
                 class="nav-list__link link"
-                href="#help"
+                href="../pets/index.html"
                 >Our pets</a
               >
             </li>
             <li class="nav-list__item">
               <a
                 class="nav-list__link link"
-                href="#features"
+                href="#help"
                 >Help the shelter</a
               >
             </li>
@@ -62,18 +64,22 @@
       </div>
     </header>
     <main>
-      <section class="start-screen section">
-        <div class="start-screen-wrapper content-wrapper">
-          <div class="start-screen-content">
-            <h2 class="start-screen-content__heading">Not only people need a house</h2>
-            <p class="start-screen-content__text text">
+      <section class="not-only">
+        <div class="not-only-wrapper content-wrapper">
+          <div class="not-only-content">
+            <h2 class="not-only-content__heading">Not only people need a house</h2>
+            <p class="not-only-content__text text">
               We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will
               love you more than anybody else in the world, you will see!
             </p>
-            <button class="start-screen-content__button button button--style-primary">Make a friend</button>
+            <a
+              href="#pets"
+              class="not-only-content__button button button--style-primary"
+              >Make a friend</a
+            >
           </div>
 
-          <div class="start-screen-image">
+          <div class="start-screen__image">
             <img
               src="../assets/img/start-screen-puppy.png"
               alt="puppy" />
@@ -83,20 +89,20 @@
 
       <section class="about">
         <div class="about-wrapper content-wrapper">
-          <div class="about-image">
+          <div class="about__image">
             <img
               src="../assets/img/about-pets.png"
               alt="cat and dog" />
           </div>
 
           <div class="about-content">
-            <h3 class="about-content__heading title title--style-h3">About the shelter “Cozy House”</h3>
-            <p class="about-content__text text">
+            <h3 class="about__heading title title--style-h3">About the shelter “Cozy House”</h3>
+            <p class="about__text text">
               Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a
               family. The others will continue to live with us and will be waiting for a lucky chance to become dearly
               loved.
             </p>
-            <p class="about-content__text text">
+            <p class="about__text text">
               We feed our wards with the best food and make sure that they do not get sick, feel comfortable (including
               psychologically) and well. We are supported by 87 volunteers and 28 employees of various skill levels.
               About 12% of the animals are taken by the shelter staff. Taking care of the animals, they become attached
@@ -106,67 +112,77 @@
         </div>
       </section>
 
-      <section class="pets">
+      <section
+        id="pets"
+        class="pets">
         <div class="pets-wrapper content-wrapper">
           <h3 class="pets__heading title title--style-h3">
             Our friends who<br />
             are looking for a house
           </h3>
 
-          <div class="slider-pets">
-            <button class="slider-pets__arrow slider-pets__arrow--direction-left button button--style-secondary">
+          <div class="slider">
+            <button
+              class="slider__arrow slider__arrow--direction-left button button--style-secondary button--form-round">
               <img
                 src="../assets/svg/arrow-left.svg"
                 alt="arrow left" />
             </button>
 
-            <div class="slider-pets-items">
-              <div class="slider-pets-items__item slider-pets-item">
-                <div class="slider-pets-item__image">
+            <div class="slider__cards pet-cards">
+              <div class="slider-pets-cards__card pet-card">
+                <div class="pet-card__image">
                   <img
                     src="../assets/img/pets-katrine.jpg"
                     alt="cat Katrine" />
                 </div>
-                <div class="slider-pets-item__name">Katrine</div>
+                <div class="pet-card__name">Katrine</div>
 
                 <button class="button button--style-secondary">Learn more</button>
               </div>
 
-              <div class="slider-pets-items__item slider-pets-item">
-                <div class="slider-pets-item__image">
+              <div class="slider-pets-cards__card pet-card">
+                <div class="pet-card__image">
                   <img
                     src="../assets/img/pets-jennifer.jpg"
                     alt="puppy Jennifer" />
                 </div>
-                <div class="slider-pets-item__name">Jennifer</div>
+                <div class="pet-card__name">Jennifer</div>
 
                 <button class="button button--style-secondary">Learn more</button>
               </div>
 
-              <div class="slider-pets-items__item slider-pets-item">
-                <div class="slider-pets-item__image">
+              <div class="slider-pets-cards__card pet-card">
+                <div class="pet-card__image">
                   <img
                     src="../assets/img/pets-woody.jpg"
                     alt="dog Woody" />
                 </div>
-                <div class="slider-pets-item__name">Woody</div>
+                <div class="pet-card__name">Woody</div>
 
                 <button class="button button--style-secondary">Learn more</button>
               </div>
             </div>
 
-            <button class="slider-pets__arrow slider-pets__arrow--direction-right button button--style-secondary">
+            <button
+              class="slider__arrow slider__arrow--direction-right button button--style-secondary button--form-round">
               <img
                 src="../assets/svg/arrow-right.svg"
                 alt="arrow right" />
             </button>
           </div>
 
-          <button class="pets__button button button--style-primary">Get to know the rest</button>
+          <a
+            href="../pets/index.html"
+            class="pets__button button button--style-primary"
+            >Get to know the rest</a
+          >
         </div>
       </section>
 
-      <section class="help">
+      <section
+        id="help"
+        class="help">
         <div class="help-wrapper content-wrapper">
           <h3 class="help__heading title title--style-h3">
             How you can help<br />
@@ -252,27 +268,27 @@
 
       <section class="donation">
         <div class="donation-wrapper content-wrapper">
-          <div class="donation-image">
+          <div class="donation__image">
             <img
               src="../assets/img/donation-dog.png"
               alt="cat and dog" />
           </div>
 
           <div class="donation-content">
-            <h3 class="donation-content__heading title title--style-h3">
+            <h3 class="donation__heading title title--style-h3">
               You can also<br />
               make a donation
             </h3>
-            <div class="donation-content__subheading title title--style-h5">
-              Name of the bank / Type of bank account
-            </div>
-            <button class="donation-content__button button button--style-primary">
+            <div class="donation__subheading title title--style-h5">Name of the bank / Type of bank account</div>
+            <a
+              href="#!"
+              class="donation__link button button--style-primary">
               <img
                 src="../assets/svg/credit-card.svg"
                 alt="credit card" />
               <span class="title title--style-h4">8380 2880 8028 8791 7435</span>
-            </button>
-            <p class="donation-content__hint hint">
+            </a>
+            <p class="donation__hint hint">
               Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at libero
               sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et malesuada fames
               ac ante ipsum primis in faucibus.
@@ -287,12 +303,12 @@
       class="footer">
       <div class="footer-wrapper content-wrapper">
         <section class="footer-contacts">
-          <h3 class="footer-contacts__title title title--style-h3">For questions and suggestions</h3>
+          <h3 class="footer__title title title--style-h3">For questions and suggestions</h3>
           <a
-            class="footer-contacts__email footer-link"
+            class="footer-link"
             href="mailto:email@shelter.com">
             <svg
-              class="footer-location__icon"
+              class="footer-link__icon"
               width="40"
               height="32"
               viewBox="0 0 40 32"
@@ -304,14 +320,14 @@
                 d="M28.374 13.2424C26.451 13.2424 24.8865 14.8302 24.8865 16.782C24.8865 18.7337 26.451 20.3215 28.374 20.3215C30.297 20.3215 31.8614 18.7337 31.8614 16.782C31.8614 14.8302 30.2969 13.2424 28.374 13.2424ZM28.374 18.9311C27.2064 18.9311 26.2564 17.967 26.2564 16.782C26.2564 15.5969 27.2063 14.6328 28.374 14.6328C29.5416 14.6328 30.4915 15.5969 30.4915 16.782C30.4915 17.967 29.5415 18.9311 28.374 18.9311Z"
                 fill="#F1CDB3" />
             </svg>
-            <span class="footer-contact__title title title--style-h4">email@shelter.com</span>
+            <span class="footer-link__text title title--style-h4">email@shelter.com</span>
           </a>
 
           <a
             href="tel:+13 674 567 75 54"
-            class="footer-contacts__phone footer-link">
+            class="footer-link">
             <svg
-              class="footer-location__icon"
+              class="footer-link__icon"
               width="40"
               height="32"
               viewBox="0 0 40 32"
@@ -329,18 +345,18 @@
                 d="M20 21.1847C21.4717 21.1847 22.6691 19.9578 22.6691 18.4497C22.6691 16.9416 21.4717 15.7147 20 15.7147C18.5283 15.7147 17.3309 16.9416 17.3309 18.4497C17.3309 19.9578 18.5283 21.1847 20 21.1847ZM20 17.1514C20.6987 17.1514 21.267 17.7338 21.267 18.4497C21.267 19.1656 20.6987 19.7479 20 19.7479C19.3014 19.7479 18.733 19.1656 18.733 18.4497C18.733 17.7339 19.3014 17.1514 20 17.1514Z"
                 fill="#F1CDB3" />
             </svg>
-            <span class="footer-contact__title title title title--style-h4">+13 674 567 75 54</span>
+            <span class="footer-link__text title title title--style-h4">+13 674 567 75 54</span>
           </a>
         </section>
 
         <section class="footer-locations">
-          <h3 class="footer-locations__title title title--style-h3">We are waiting for your visit</h3>
+          <h3 class="footer__title title title--style-h3">We are waiting for your visit</h3>
           <a
-            class="footer-locations__location footer-link"
+            class="footer-link"
             href="https://maps.app.goo.gl/YKdQUfPBckraGof38"
             target="_blank">
             <svg
-              class="footer-location__icon"
+              class="footer-link__icon"
               width="22"
               height="32"
               viewBox="0 0 22 32"
@@ -351,17 +367,17 @@
                 d="M11 5.33329C7.9674 5.33329 5.50008 7.72585 5.50008 10.6666C5.50008 13.6074 7.9674 16 11 16C14.0327 16 16.5 13.6074 16.5 10.6667C16.5 7.72592 14.0327 5.33329 11 5.33329ZM11 14.6667C8.72537 14.6667 6.87505 12.8724 6.87505 10.6667C6.87505 8.46092 8.72537 6.66667 11 6.66667C13.2747 6.66667 15.125 8.46092 15.125 10.6667C15.125 12.8724 13.2747 14.6667 11 14.6667Z" />
             </svg>
 
-            <span class="footer-contact__title title title--style-h4">
+            <span class="footer-link__text title title--style-h4">
               1 Central Street, Boston (entrance from the store)
             </span>
           </a>
 
           <a
             href="https://maps.app.goo.gl/YKdQUfPBckraGof38"
-            class="footer-locations__location footer-link"
+            class="footer-link"
             target="_blank">
             <svg
-              class="footer-location__icon"
+              class="footer-link__icon"
               width="22"
               height="32"
               viewBox="0 0 22 32"
@@ -372,10 +388,10 @@
                 d="M11 5.33329C7.9674 5.33329 5.50008 7.72585 5.50008 10.6666C5.50008 13.6074 7.9674 16 11 16C14.0327 16 16.5 13.6074 16.5 10.6667C16.5 7.72592 14.0327 5.33329 11 5.33329ZM11 14.6667C8.72537 14.6667 6.87505 12.8724 6.87505 10.6667C6.87505 8.46092 8.72537 6.66667 11 6.66667C13.2747 6.66667 15.125 8.46092 15.125 10.6667C15.125 12.8724 13.2747 14.6667 11 14.6667Z" />
             </svg>
 
-            <span class="footer-contact__title title title title--style-h4"> 18 South Park, London </span>
+            <span class="footer-link__text title title title--style-h4"> 18 South Park, London </span>
           </a>
         </section>
-        <section class="footer__image">
+        <section class="footer-image">
           <img
             src="../assets/img/footer-puppy.png"
             alt="puppy" />
