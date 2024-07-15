@@ -4,7 +4,7 @@
 .our-friends__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 45px;
+  gap: 44px;
 }
 
 .our-friends__heading {

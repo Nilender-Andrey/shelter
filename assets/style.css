@@ -11,17 +11,22 @@
 }
 
 :root {
-  --color-primary: #f1cdb3;
+  --font-family: 'Georgia', sans-serif;
+  --second-family: 'Arial', sans-serif;
 
-  --color-light-s: #fafafa;
+  --color-light-xl: #fff;
   --color-light-l: #f6f6f6;
-  --color-light-xl: #ffffff;
+  --color-light-s: #fafafa;
 
   --color-dark-s: #cdcdcd;
   --color-dark-m: #b2b2b2;
   --color-dark-l: #545454;
   --color-dark-xl: #4c4c4c;
+  --color-dark-2xl: #444;
   --color-dark-3xl: #292929;
+
+  --color-primary: #f1cdb3;
+  --color-primary-light: #fddcc4;
 }
 
 * {
@@ -30,20 +35,35 @@
   margin: 0;
 }
 
-h1,
-h2,
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+
+  background: url('../assets/img/noise_transparent.png'),
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
+}
+
+img {
+  object-fit: contain;
+  width: 100%;
+}
+
 .title {
-  font-family: Georgia, serif;
+  font-family: var(--font-family);
   font-weight: 400;
   letter-spacing: 0.06em;
 }
 
-h1 {
+.title--style-h1 {
   font-size: 32px;
   line-height: 36px;
 }
 
-h2 {
+.title--style-h2 {
   font-size: 44px;
   line-height: 57.2px;
   letter-spacing: 0;
@@ -51,7 +71,7 @@ h2 {
 
 .title--style-h3 {
   font-size: 35px;
-  line-height: 45px;
+  line-height: 45.5px;
 }
 
 .title--style-h4 {
@@ -66,7 +86,7 @@ h2 {
 
 p,
 .hint {
-  font-family: Arial;
+  font-family: var(--second-family);
   font-weight: 400;
 }
 
@@ -79,23 +99,6 @@ p,
   font-size: 12px;
   font-style: italic;
   line-height: 18px;
-}
-
-html {
-  font-size: 18px;
-  scroll-behavior: smooth;
-}
-
-body {
-  position: relative;
-
-  font-family: Arial, sans-serif;
-  font-weight: 400;
-}
-
-img {
-  object-fit: contain;
-  width: 100%;
 }
 
 .header {
@@ -127,7 +130,7 @@ img {
 .logo__subtitle {
   padding-left: 4px;
 
-  font-family: Arial, sans-serif;
+  font-family: var(--second-family);
   font-weight: 400;
   font-size: 13px;
   color: var(--color-light-xl);
@@ -138,7 +141,7 @@ img {
 .nav-list {
   display: flex;
   gap: 36px;
-  padding: 16px 0 17px;
+  padding: 17px 0 17px;
 }
 
 .nav-list__item {
@@ -146,6 +149,8 @@ img {
 }
 
 .link {
+  font-family: var(--second-family);
+  font-weight: 400;
   font-size: 15px;
   line-height: 24px;
   text-decoration: none;
@@ -169,6 +174,7 @@ img {
 
 .header--style-secondary {
   position: static;
+  background-color: var(--color-light-xl);
 }
 
 .header--style-secondary .logo__title {
@@ -202,10 +208,10 @@ img {
   padding: 13px 42px 13px 45px;
   border-radius: 100px;
 
-  font-family: Georgia;
+  font-family: var(--font-family);
   font-size: 17px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 22.1px;
   letter-spacing: 0.06em;
   color: var(--color-dark-3xl);
   text-decoration: none;
@@ -257,10 +263,6 @@ img {
   pointer-events: none;
 }
 
-.footer {
-  background: url('../assets/img/footer-gradient-background.jpg') no-repeat;
-  background-size: cover;
-}
 .footer-wrapper {
   display: flex;
   justify-content: center;
@@ -279,12 +281,12 @@ img {
 
 .footer-contacts {
   flex-basis: 280px;
-  gap: 40px;
+  gap: 39px;
 }
 
 .footer-locations {
   flex-basis: 302px;
-  gap: 33px;
+  gap: 32px;
 }
 
 .footer__title {
@@ -368,7 +370,7 @@ img {
 }
 
 .pet-card__name {
-  font-family: Georgia;
+  font-family: var(--font-family);
   font-size: 20px;
   font-weight: 400;
   line-height: 22.72px;

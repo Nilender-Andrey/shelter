@@ -1,8 +1,3 @@
-.not-only {
-  background: url('../assets/img/start-screen-gradient-background.jpg') no-repeat;
-  background-size: cover;
-}
-
 .not-only-wrapper {
   display: flex;
   gap: 42px;
@@ -37,6 +32,10 @@
   justify-content: center;
   align-items: end;
   flex-basis: 698px;
+}
+
+.about {
+  background-color: var(--color-light-xl);
 }
 
 .about-wrapper {
@@ -75,15 +74,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.pets-wrapper {
   gap: 60px;
 }
-.pets-wrapper {
-  gap: 61px;
+.help-wrapper {
+  gap: 59px;
 }
 
 .pets__heading,
 .help__heading {
   text-align: center;
+}
+
+.help__heading {
+  max-width: 310px;
 }
 
 .slider {
@@ -101,6 +107,10 @@
 
 .slider__arrow--direction-right {
   margin-left: auto;
+}
+
+.help {
+  background-color: var(--color-light-xl);
 }
 
 .help-items {
@@ -152,6 +162,10 @@
   gap: 20px;
 }
 
+.donation__heading {
+  max-width: 300px;
+}
+
 .donation__link {
   display: flex;
   align-items: center;
@@ -166,7 +180,7 @@
 }
 
 .donation__link img {
-  width: 29px;
+  width: 31px;
   height: 23px;
 }
 
