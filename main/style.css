@@ -77,9 +77,6 @@
   align-items: center;
   gap: 60px;
 }
-.pets-wrapper {
-  gap: 61px;
-}
 
 .pets__heading,
 .help__heading {
@@ -166,7 +163,7 @@
 }
 
 .donation__link img {
-  width: 29px;
+  width: 31px;
   height: 23px;
 }
 
