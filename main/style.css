@@ -74,12 +74,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.pets-wrapper {
   gap: 60px;
+}
+.help-wrapper {
+  gap: 57px;
 }
 
 .pets__heading,
 .help__heading {
   text-align: center;
+}
+
+.help__heading {
+  max-width: 310px;
 }
 
 .slider {
@@ -150,6 +160,10 @@
   flex-direction: column;
   flex-basis: 380px;
   gap: 20px;
+}
+
+.donation__heading {
+  max-width: 300px;
 }
 
 .donation__link {
