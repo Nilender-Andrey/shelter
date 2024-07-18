@@ -1,4 +1,5 @@
 .our-friends {
+  min-height: calc(100vh - 120px - 350px);
   background-color: var(--color-light-l);
 }
 .our-friends__wrapper {
