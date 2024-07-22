@@ -1,0 +1,47 @@
+.our-friends {
+  min-height: calc(100vh - 120px - 350px);
+  background-color: var(--color-light-l);
+}
+.our-friends__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.our-friends__heading {
+  text-align: center;
+}
+
+.our-friends__cards {
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 30px;
+
+  padding: 15px 0;
+}
+
+.our-friends__buttons {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(52px, 62px));
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+}
+
+.our-friends__page-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+.our-friends__button,
+.our-friends__page-number {
+  justify-self: center;
+}
