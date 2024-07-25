@@ -1,6 +1,6 @@
 .not-only-wrapper {
-  display: flex;
-  gap: 42px;
+  align-items: end;
+  gap: 3.5%;
   padding: 180px 40px 0;
 }
 
@@ -12,7 +12,7 @@
   gap: 42px;
   align-self: center;
 
-  padding-bottom: 80px;
+  padding-bottom: 78px;
   max-width: 460px;
 }
 
@@ -26,12 +26,12 @@
 }
 
 .start-screen__image {
-  flex-shrink: 1;
+  flex-shrink: 1.4;
 
   display: flex;
   justify-content: center;
   align-items: end;
-  flex-basis: 698px;
+  max-width: 698px;
 }
 
 .about {
@@ -39,21 +39,19 @@
 }
 
 .about-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 120px;
+  column-gap: 10%;
 }
 
 .about__image {
-  flex-basis: 300px;
+  flex-shrink: 0;
+  max-width: 300px;
   max-height: 408px;
 }
 
 .about-content {
   display: flex;
   flex-direction: column;
-  flex-basis: 430px;
+  max-width: 430px;
   gap: 25px;
 }
 
@@ -71,16 +69,14 @@
 
 .pets-wrapper,
 .help-wrapper {
-  display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .pets-wrapper {
   gap: 60px;
 }
 .help-wrapper {
-  gap: 59px;
+  gap: 57px;
 }
 
 .pets__heading,
@@ -142,23 +138,19 @@
 }
 
 .donation-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-
-  margin: 0 auto;
+  gap: 2.5%;
 }
 
 .donation__image {
-  flex-basis: 505px;
+  max-width: 505px;
   max-height: 261px;
 }
 
 .donation-content {
+  flex-shrink: 2;
   display: flex;
   flex-direction: column;
-  flex-basis: 380px;
+  max-width: 380px;
   gap: 20px;
 }
 
@@ -173,7 +165,7 @@
 
   width: 350px;
   height: 43px;
-  padding: 10px 10px 10px 14px;
+  padding: 10px 10px 10px 12px;
 
   border-radius: 9px;
   color: var(--color-dark-l);
@@ -186,4 +178,38 @@
 
 .donation__hint {
   color: var(--color-dark-m);
+}
+
+@media screen and (max-width: 768px) {
+  .not-only-wrapper {
+    padding: 150px 30px 0;
+  }
+
+  .not-only-content {
+    padding-bottom: 100px;
+  }
+
+  .not-only-content__button {
+    align-self: center;
+  }
+
+  .start-screen__image {
+    max-width: 568px;
+    align-self: flex-end;
+  }
+  .donation-wrapper,
+  .about-wrapper {
+    flex-direction: column-reverse;
+    row-gap: 80px;
+  }
+  .donation-wrapper {
+    row-gap: 60px;
+  }
+
+  .help-items {
+    column-gap: 60px;
+  }
+  .help-item {
+    width: 170px;
+  }
 }
