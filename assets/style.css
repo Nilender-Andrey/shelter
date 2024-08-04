@@ -412,6 +412,7 @@ p,
 }
 
 .burger-btn__line {
+  display: block;
   width: 100%;
   height: 2px;
 
