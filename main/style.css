@@ -327,6 +327,7 @@
   .help-items {
     column-gap: 30px;
     row-gap: 30px;
+    justify-content: start;
 
     padding: 1px 4px;
   }
