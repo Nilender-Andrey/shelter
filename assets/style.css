@@ -157,7 +157,7 @@ p,
   line-height: 24px;
   text-decoration: none;
 
-  transition: all 0.15s linear;
+  transition: color 0.15s linear;
 }
 
 .nav-list__item--active {
@@ -492,7 +492,6 @@ p,
     margin-left: auto;
 
     background: var(--color-dark-xl);
-    transition: width 0.2s;
   }
 
   .header--style-secondary .nav-list {
