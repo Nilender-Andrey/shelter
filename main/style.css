@@ -1,7 +1,7 @@
 .not-only-wrapper {
   align-items: end;
   gap: 3.5%;
-  padding: 180px 40px 0;
+  padding: 60px 40px 0;
 }
 
 .not-only-content {
@@ -200,7 +200,7 @@
 
 @media screen and (max-width: 768px) {
   .not-only-wrapper {
-    padding: 150px 30px 0;
+    padding: 30px 30px 0;
   }
 
   .not-only-content {
@@ -261,7 +261,7 @@
   }
 
   .not-only-wrapper {
-    padding: 150px 10px 0;
+    padding: 30px 10px 0;
   }
 
   .not-only-content__heading {
