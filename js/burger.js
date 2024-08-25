@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   burgerBtn.addEventListener('click', toggleMenuHandler);
   headerWrapper.addEventListener('click', closeMenuHandler);
 
-  function toggleMenuHandler(event) {
+  function toggleMenuHandler() {
     content.classList.toggle('content--nav-open');
   }
 

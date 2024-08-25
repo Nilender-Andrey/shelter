@@ -88,31 +88,6 @@
   max-width: 310px;
 }
 
-.slider {
-  display: grid;
-  grid-template-columns: minmax(52px, 1fr) minmax(270px, 990px) minmax(52px, 1fr);
-  grid-template-areas: 'sa--left sc sa--right';
-  align-items: center;
-  gap: 12px;
-
-  width: 100%;
-}
-
-.slider__cards {
-  grid-area: sc;
-
-  overflow: hidden;
-}
-
-.slider__arrow--direction-left {
-  grid-area: sa--left;
-}
-
-.slider__arrow--direction-right {
-  grid-area: sa--right;
-  justify-self: end;
-}
-
 .help {
   background-color: var(--color-light-xl);
 }
@@ -302,19 +277,6 @@
     gap: 42px;
   }
 
-  .slider {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 52px;
-    grid-template-areas:
-      'sc sc'
-      'sa--left sa--right';
-    justify-items: center;
-    row-gap: 20px;
-    column-gap: 0px;
-
-    padding: 0 15px;
-  }
-
   .slider__arrow--direction-right {
     justify-self: auto;
   }
@@ -353,5 +315,88 @@
 @media screen and (max-width: 320px) {
   .help-items {
     justify-content: start;
+  }
+}
+
+/* Слайдер */
+
+.slider {
+  display: grid;
+  grid-template-columns: minmax(52px, 1fr) 990px minmax(52px, 1fr);
+  grid-template-areas: 'sa--left sc sa--right';
+  align-items: center;
+  gap: 12px;
+
+  width: 100%;
+}
+
+.slider__slides-wrapper {
+  grid-area: sc;
+
+  overflow: hidden;
+}
+
+.slider__slides {
+  position: relative;
+
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.slider__slide {
+  justify-content: center;
+  gap: 90px;
+}
+
+.slider__arrow--direction-left {
+  grid-area: sa--left;
+}
+
+.slider__arrow--direction-right {
+  grid-area: sa--right;
+  justify-self: end;
+}
+
+@media screen and (max-width: 1200px) {
+  .slider {
+    grid-template-columns: 1fr 890px 1fr;
+  }
+
+  .slider__slide {
+    gap: 40px;
+  }
+
+  .slider__arrow {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .slider {
+    grid-template-columns: 1fr 580px 1fr;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .slider {
+    grid-template-columns: repeat(2, 290px);
+    grid-template-rows: 435px 52px;
+    grid-template-areas:
+      'sc sc'
+      'sa--left sa--right';
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 0px;
+
+    padding: 0 15px;
+  }
+
+  .slider__slides-wrapper {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .slider {
+    grid-template-columns: repeat(2, 135px);
   }
 }
