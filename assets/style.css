@@ -10,6 +10,12 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: 'Georgia';
+  src: url('./fonts/georgia/georgia-bold.ttf');
+  font-weight: 700;
+}
+
 :root {
   --font-family: 'Georgia', sans-serif;
   --second-family: 'Arial', sans-serif;
