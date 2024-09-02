@@ -1,6 +1,7 @@
 .modal {
-  position: absolute;
+  position: fixed;
   top: 0;
+
   z-index: 10;
 
   width: 100vw;
@@ -13,21 +14,46 @@
   background-color: rgba(41, 41, 41, 0.6);
 
   color: #000;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 0.5s ease, visibility 0s;
 }
 
-.modal__content-wrapper {
-  position: absolute;
-  top: 136px;
+.modal.open {
+  opacity: 1;
+  visibility: visible;
+}
 
-  width: 100%;
-  max-width: 1005px;
-  padding: 52px;
+.modal__content {
+  position: absolute;
+  top: 188px;
+
+  display: flex;
+
+  width: calc(100% - 140px);
+  max-width: 900px;
+  min-height: 500px;
+  margin: 0 auto;
+
+  border-radius: 9px;
+  background-color: var(--color-light-s);
+
+  opacity: 0;
+  transform: translate(0px, -100px);
+  transition: all 0.5s ease;
+}
+
+.modal.open .modal__content {
+  opacity: 1;
+  transform: translate(0px);
 }
 
 .modal__button {
   position: absolute;
-  top: 0;
-  right: 10px;
+  top: -52px;
+  right: -42px;
 
   display: flex;
   justify-content: center;
@@ -53,25 +79,20 @@
   background-color: var(--color-primary);
 }
 
-.modal__content {
-  display: flex;
+.modal__image {
+  position: relative;
 
-  max-width: 900px;
-  margin: 0 auto;
+  /*   max-height: 500px; */
+  min-width: 350px;
+  width: 100%;
 
-  border-radius: 9px;
-  background-color: var(--color-light-s);
-
+  border-radius: 9px 0 0 9px;
   overflow: hidden;
 }
 
-.modal__image {
-  min-width: 350px;
-  max-height: 500px;
-  width: 100%;
-}
-
 .modal__image img {
+  position: absolute;
+
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -136,18 +157,14 @@
 }
 
 @media screen and (max-width: 768px) {
-  .modal__content-wrapper {
-    top: 194px;
-    padding: 69px;
+  .modal__content {
+    top: 263px;
+    min-height: 350px;
   }
 
-  .modal__button {
-    top: 17px;
-    right: 25px;
-  }
   .modal__image {
     flex-shrink: 1.6;
-    max-height: 350px;
+    /*   max-height: 350px; */
     min-width: 200px;
   }
 
@@ -167,7 +184,7 @@
   }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 640px) {
   .modal__image {
     display: none;
   }
@@ -177,14 +194,14 @@
     max-width: none;
   }
 
-  .modal__content-wrapper {
-    top: 182px;
-    padding: 40px;
+  .modal__content {
+    top: 221px;
+    width: calc(100% - 80px);
+    min-height: fit-content;
   }
 
   .modal__button {
-    top: -13px;
-    right: 11px;
+    right: -29px;
   }
 
   .modal__title,

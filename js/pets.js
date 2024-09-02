@@ -93,7 +93,7 @@ export default [
   {
     id: 8,
     name: 'Charly',
-    img: '../../assets/img/pets-charly.jpg',
+    img: '../../assets/img/pets-charly.png',
     type: 'Dog',
     breed: 'Jack Russell Terrier',
     description:

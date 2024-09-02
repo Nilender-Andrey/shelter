@@ -1,3 +1,4 @@
+import { openModal } from './modal.js';
 import petsData from './pets.js';
 import { debounce, getRandomRecordsFunction } from './utile.js';
 
@@ -60,7 +61,7 @@ function slider() {
       <button class="button button--style-secondary">Learn more</button>
   `;
 
-      slideElement.addEventListener('click', () => console.log(item));
+      slideElement.addEventListener('click', () => openModal(item));
       return slideElement;
     });
 

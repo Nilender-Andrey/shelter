@@ -1,6 +1,6 @@
 /**
  * @typedef {Object} Record
- * @property {number} Id
+ * @property {number} id
  */
 
 /**
@@ -17,7 +17,7 @@ export function getRandomRecordsFunction(records) {
    */
   return function (quantityRecords, excludeRecords) {
     const shuffled = records
-      .filter((record) => !excludeRecords.find((excludeRecord) => excludeRecord.Id === record.id))
+      .filter((record) => !excludeRecords.find((excludeRecord) => excludeRecord.id === record.id))
       .sort(() => 0.5 - Math.random());
     return shuffled.slice(0, quantityRecords);
   };

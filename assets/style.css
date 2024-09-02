@@ -51,13 +51,18 @@ body {
     radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .content {
   position: relative;
   overflow-x: hidden;
 }
 
-.content--nav-open {
-  height: 100vh;
+.content--scroll-disabled {
+  position: fixed;
+  /*  height: 100vh; */
   overflow: hidden;
 }
 
@@ -415,7 +420,7 @@ p,
   transition: 0.25s all linear;
 }
 
-.content--nav-open .burger-btn {
+.header-wrapper--nav-open .burger-btn {
   transform: rotate(90deg);
 }
 
@@ -508,11 +513,11 @@ p,
     background: var(--color-dark-xl);
   }
 
-  .content--nav-open .nav {
+  .header-wrapper--nav-open .nav {
     right: 0;
   }
 
-  .content--nav-open .backdrop {
+  .header-wrapper--nav-open .backdrop {
     display: block;
   }
 

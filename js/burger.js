@@ -7,14 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
   headerWrapper.addEventListener('click', closeMenuHandler);
 
   function toggleMenuHandler() {
-    content.classList.toggle('content--nav-open');
+    headerWrapper.classList.toggle('header-wrapper--nav-open');
+    content.classList.toggle('content--scroll-disabled');
   }
 
   function closeMenuHandler(event) {
     let target = event.target;
 
     if (['nav-list__link', 'backdrop'].includes(target.classList[0])) {
-      content.classList.remove('content--nav-open');
+      headerWrapper.classList.remove('header-wrapper--nav-open');
+      content.classList.remove('content--scroll-disabled');
     }
   }
 });
