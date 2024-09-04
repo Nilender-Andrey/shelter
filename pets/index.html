@@ -7,6 +7,7 @@
   <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../assets/style.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../assets/modal.css" />
 
   <title>Cozy House - Pets</title>
 </head>
@@ -56,77 +57,79 @@
             are looking for a house
           </h3>
 
-          <div class="our-friends__cards pet-cards">
-            <div class="pet-card">
-              <div class="pet-card__image">
-                <img width="270" height="270" src="../assets/img/pets-katrine.jpg" alt="cat Katrine">
+          <div class="our-friends__pages-wrapper">
+            <div class="our-friends__pages">
+              <div class="pet-card">
+                <div class="pet-card__image">
+                  <img width="270" height="270" src="../assets/img/pets-katrine.jpg" alt="cat Katrine">
+                </div>
+                <div class="pet-card__name">Katrine</div>
+
+                <button class="button button--style-secondary">Learn more</button>
               </div>
-              <div class="pet-card__name">Katrine</div>
 
-              <button class="button button--style-secondary">Learn more</button>
-            </div>
+              <div class="pet-card">
+                <div class="pet-card__image">
+                  <img width="270" height="270" src="../assets/img/pets-jennifer.jpg" alt="puppy Jennifer">
+                </div>
+                <div class="pet-card__name">Jennifer</div>
 
-            <div class="pet-card">
-              <div class="pet-card__image">
-                <img width="270" height="270" src="../assets/img/pets-jennifer.jpg" alt="puppy Jennifer">
+                <button class="button button--style-secondary">Learn more</button>
               </div>
-              <div class="pet-card__name">Jennifer</div>
 
-              <button class="button button--style-secondary">Learn more</button>
-            </div>
+              <div class="pet-card">
+                <div class="pet-card__image">
+                  <img width="270" height="270" src="../assets/img/pets-woody.jpg" alt="dog Woody">
+                </div>
+                <div class="pet-card__name">Woody</div>
 
-            <div class="pet-card">
-              <div class="pet-card__image">
-                <img width="270" height="270" src="../assets/img/pets-woody.jpg" alt="dog Woody">
+                <button class="button button--style-secondary">Learn more</button>
               </div>
-              <div class="pet-card__name">Woody</div>
 
-              <button class="button button--style-secondary">Learn more</button>
-            </div>
+              <div class="pet-card">
+                <div class="pet-card__image">
+                  <img width="270" height="270" src="../assets/img/pets-sophia.jpg" alt="puppy Sophia">
+                </div>
+                <div class="pet-card__name">Sophia</div>
 
-            <div class="pet-card">
-              <div class="pet-card__image">
-                <img width="270" height="270" src="../assets/img/pets-sophia.jpg" alt="puppy Sophia">
+                <button class="button button--style-secondary">Learn more</button>
               </div>
-              <div class="pet-card__name">Sophia</div>
 
-              <button class="button button--style-secondary">Learn more</button>
-            </div>
+              <div class="pet-card">
+                <div class="pet-card__image">
+                  <img width="270" height="270" src="../assets/img/pets-timmy.jpg" alt="cat Timmy">
+                </div>
+                <div class="pet-card__name">Timmy</div>
 
-            <div class="pet-card">
-              <div class="pet-card__image">
-                <img width="270" height="270" src="../assets/img/pets-timmy.jpg" alt="cat Timmy">
+                <button class="button button--style-secondary">Learn more</button>
               </div>
-              <div class="pet-card__name">Timmy</div>
 
-              <button class="button button--style-secondary">Learn more</button>
-            </div>
+              <div class="pet-card">
+                <div class="pet-card__image">
+                  <img width="270" height="270" src="../assets/img/pets-charly.jpg" alt="dog Charly">
+                </div>
+                <div class="pet-card__name">Charly</div>
 
-            <div class="pet-card">
-              <div class="pet-card__image">
-                <img width="270" height="270" src="../assets/img/pets-charly.jpg" alt="dog Charly">
+                <button class="button button--style-secondary">Learn more</button>
               </div>
-              <div class="pet-card__name">Charly</div>
 
-              <button class="button button--style-secondary">Learn more</button>
-            </div>
+              <div class="pet-card">
+                <div class="pet-card__image">
+                  <img width="270" height="270" src="../assets/img/pets-scarlet.jpg" alt="puppy Scarlett">
+                </div>
+                <div class="pet-card__name">Scarlett</div>
 
-            <div class="pet-card">
-              <div class="pet-card__image">
-                <img width="270" height="270" src="../assets/img/pets-scarlet.jpg" alt="puppy Scarlett">
+                <button class="button button--style-secondary">Learn more</button>
               </div>
-              <div class="pet-card__name">Scarlett</div>
 
-              <button class="button button--style-secondary">Learn more</button>
-            </div>
+              <div class="pet-card">
+                <div class="pet-card__image">
+                  <img width="270" height="270" src="../assets/img/pets-freddie.jpg" alt="cat Freddie">
+                </div>
+                <div class="pet-card__name">Freddie</div>
 
-            <div class="pet-card">
-              <div class="pet-card__image">
-                <img width="270" height="270" src="../assets/img/pets-freddie.jpg" alt="cat Freddie">
+                <button class="button button--style-secondary">Learn more</button>
               </div>
-              <div class="pet-card__name">Freddie</div>
-
-              <button class="button button--style-secondary">Learn more</button>
             </div>
           </div>
 
@@ -137,7 +140,7 @@
               &lt;&lt;
             </button>
             <button
-              class="our-friends__button our-friends__button--step-up button button--style-secondary button--form-round"
+              class="our-friends__button our-friends__button--step-down button button--style-secondary button--form-round"
               disabled>
               &lt;
             </button>
@@ -145,11 +148,11 @@
             <div class="our-friends__page-number title title--style-h4">1</div>
 
             <button
-              class="our-friends__button our-friends__button--step-down button button--style-secondary button--form-round">
+              class="our-friends__button our-friends__button--step-up button button--style-secondary button--form-round">
               &gt;
             </button>
             <button
-              class="our-friends__button our-friends__button--finsh button button--style-secondary button--form-round">
+              class="our-friends__button  our-friends__button--finish button button--style-secondary button--form-round">
               &gt;&gt;
             </button>
           </div>
@@ -227,10 +230,13 @@
         </div>
       </div>
     </footer>
+
+    <div id="modal" class="modal"></div>
   </div>
 
   <script src="index.js"></script>
-  <script src="../js/burger.jss"></script>
+  <script type="module" src="../js/burger.js"></script>
+  <script type="module" src="../js/pagination.js"></script>
 </body>
 
 </html>

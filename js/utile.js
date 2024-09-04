@@ -40,3 +40,29 @@ export function debounce(callback, ms) {
     }, ms);
   };
 }
+
+/**
+ * @description Возвращает массив из 48 карточек образуемый из 8 записей
+ * @param {Record[]} records - Массив обрабатываемых записей
+ * @returns {Record[]}
+ */
+export function getCardsForPagination(petsData) {
+  const getRandomPetCards = getRandomRecordsFunction(petsData);
+
+  const result = [];
+
+  for (let index = 0; index < 6; index++) {
+    let excludeCards = result.length ? result.slice(-3) : [];
+    let cards = getRandomPetCards(8, excludeCards);
+    result.push(...cards.slice(0, 3), ...excludeCards, ...cards.slice(3));
+  }
+
+  return result;
+
+  // return Array.from(Array(6), () => getRandomPetCards(8, []))
+  //   .flat()
+  //   .map((item, index) => {
+  //     item.index = index;
+  //     return item;
+  //   });
+}
