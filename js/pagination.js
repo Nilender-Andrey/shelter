@@ -4,7 +4,8 @@ import { debounce, getCardsForPagination } from './utile.js';
 
 const TOTAL_CARDS = 48;
 
-const sliderDebounce = debounce(updatePagination, 300);
+const paginationDebounce = debounce(updatePagination, 300);
+window.addEventListener('resize', paginationDebounce);
 
 const options = {
   cards: getCardsForPagination(petsData),
@@ -23,8 +24,6 @@ buttonStartElement && (buttonStartElement.onclick = () => changePageNumber(-opti
 buttonFinishElement && (buttonFinishElement.onclick = () => changePageNumber(options.pageNumber));
 buttonUpElement && (buttonUpElement.onclick = () => changePageNumber(1));
 buttonDownElement && (buttonDownElement.onclick = () => changePageNumber(-1));
-
-console.log(options);
 
 /**
  * @description Обновляет состояние страниц плагинации
@@ -78,9 +77,9 @@ function createPage(pageNumber) {
  * @returns {number}
  */
 function getCardsNumber(width) {
-  if (width >= 890) {
+  if (width > 980) {
     return 8;
-  } else if (width >= 580) {
+  } else if (width >= 640) {
     return 6;
   } else {
     return 3;
@@ -127,5 +126,3 @@ function disableLastButtons(isDisable) {
 }
 
 updatePagination();
-
-window.addEventListener('resize', sliderDebounce);

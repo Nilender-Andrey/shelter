@@ -58,11 +58,4 @@ export function getCardsForPagination(petsData) {
   }
 
   return result;
-
-  // return Array.from(Array(6), () => getRandomPetCards(8, []))
-  //   .flat()
-  //   .map((item, index) => {
-  //     item.index = index;
-  //     return item;
-  //   });
 }

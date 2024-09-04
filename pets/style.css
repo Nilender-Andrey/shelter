@@ -5,17 +5,18 @@
 
 .our-friends__wrapper {
   display: block;
+
+  padding: 80px 0px 95px;
 }
 
 .our-friends__heading {
   text-align: center;
 
-  margin-bottom: 59px;
+  margin-bottom: 33px;
 }
 
 .our-friends__pages-wrapper {
-  margin: 0 auto;
-  margin-bottom: 60px;
+  margin: 0 auto 30px;
 
   overflow: hidden;
 }
@@ -34,6 +35,8 @@
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 30px;
+
+  padding: 25px;
 }
 
 .our-friends__buttons {
@@ -41,8 +44,9 @@
   grid-template-columns: repeat(5, minmax(52px, 62px));
   align-items: center;
   justify-content: center;
-
   gap: 10px;
+
+  padding: 5px 10px;
 }
 
 .our-friends__page-number {
@@ -62,32 +66,32 @@
   justify-self: center;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 980px) {
   .our-friends__wrapper {
-    padding: 80px 30px 77px;
+    padding: 80px 0 71px;
   }
 
   .our-friends__heading {
-    margin-bottom: 30px;
+    margin-bottom: 5px;
   }
 
   .our-friends__pages-wrapper {
-    height: 1365px;
-    width: 580px;
-    margin-bottom: 39px;
+    height: 1425px;
+    width: 640px;
+    margin-bottom: -1px;
   }
 }
 
 @media screen and (max-width: 640px) {
   .our-friends__wrapper {
-    padding: 42px 10px;
+    padding: 42px 0 36px;
   }
 
   .our-friends__heading {
-    margin-bottom: 42px;
+    margin-bottom: 16px;
   }
   .our-friends__pages-wrapper {
-    margin-bottom: 41px;
-    width: 270px;
+    margin-bottom: 3px;
+    width: 320px;
   }
 }
