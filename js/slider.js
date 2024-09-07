@@ -4,14 +4,16 @@ import { debounce, getRandomRecordsFunction } from './utile.js';
 
 const gerRandomPetCards = getRandomRecordsFunction(petsData);
 const sliderDebounce = debounce(slider, 300);
+const SLIDE_PADDINGS = 40;
 
 function slider() {
   const slides = document.querySelector('.slider__slides');
   const widthOffset = document.querySelector('.slider__slides-wrapper').clientWidth;
+  const widthOffsetWithPadding = widthOffset + SLIDE_PADDINGS;
   let flag = true;
 
   const options = {
-    duration: 1000, //время анимации
+    duration: 800, //время анимации
     cardWidth: widthOffset >= 580 ? 290 : 270,
   };
 
@@ -19,13 +21,13 @@ function slider() {
   const numberOfCardsToShow = Math.floor(widthOffset / options.cardWidth);
 
   // Расчет ширины слайдера
-  slides.style.width = 3 * widthOffset + 'px';
+  slides.style.width = 3 * widthOffsetWithPadding + 'px';
 
   // Сдвиг слайдера
-  slides.style.left = -widthOffset + 'px';
+  slides.style.left = -widthOffset - SLIDE_PADDINGS * 1.5 + 'px';
 
   /**
-   * Подготовка к работе слайдера
+   * @description Подготовка к работе слайдера
    */
   function initSlider() {
     slides.innerHTML = '';
@@ -42,12 +44,12 @@ function slider() {
   initSlider();
 
   /**
-   * Создает элемент картинки с изображением заданного индекса
+   * @description Создает элемент картинки с изображением заданного индекса
    */
   function createSlide(excludeCards = []) {
     const slideElement = document.createElement('div');
     slideElement.className = 'slider__slide pet-cards';
-    slideElement.style.width = widthOffset;
+    slideElement.style.width = widthOffsetWithPadding + 'px';
     slideElement.cards = gerRandomPetCards(numberOfCardsToShow, excludeCards);
 
     const card = slideElement.cards.map((item) => {
@@ -70,7 +72,7 @@ function slider() {
   }
 
   /**
-   * Контролирует добавление следующего слайд
+   * @description Контролирует добавление следующего слайд
    */
   function generateNextSlide() {
     if (!flag) {
@@ -91,7 +93,7 @@ function slider() {
   }
 
   /**
-   * Контролирует добавление предыдущего слайд
+   * @description Контролирует добавление предыдущего слайд
    */
   function generatePrevSlide() {
     if (!flag) {
@@ -119,7 +121,7 @@ function slider() {
    */
 
   /**
-   * Начинает анимацию
+   * @description Начинает анимацию
    * @param {AnimateProps} animateProps
    */
   function startAnimate({ duration, draw, removeElement }) {
@@ -157,8 +159,9 @@ function slider() {
    * @param {number} step - Шаг анимации
    */
   function drawPrevSlide(step) {
-    document.querySelector('.slider__slide.pet-cards:last-child').style.width = widthOffset * (1 - step) + 'px';
-    document.querySelector('.slider__slide.pet-cards').style.width = widthOffset * step + 'px';
+    document.querySelector('.slider__slide.pet-cards:last-child').style.width =
+      widthOffsetWithPadding * (1 - step) + 'px';
+    document.querySelector('.slider__slide.pet-cards').style.width = widthOffsetWithPadding * step + 'px';
   }
 
   /**
@@ -166,8 +169,8 @@ function slider() {
    * @param {number} step - Шаг анимации
    */
   function drawNextSlide(step) {
-    document.querySelector('.slider__slide.pet-cards').style.width = widthOffset * (1 - step) + 'px';
-    document.querySelector('.slider__slide.pet-cards:last-child').style.width = widthOffset * step + 'px';
+    document.querySelector('.slider__slide.pet-cards').style.width = widthOffsetWithPadding * (1 - step) + 'px';
+    document.querySelector('.slider__slide.pet-cards:last-child').style.width = widthOffsetWithPadding * step + 'px';
   }
 }
 

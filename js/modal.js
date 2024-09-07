@@ -1,7 +1,10 @@
 const modal = document.getElementById('modal');
 let modalContent;
 
-function init() {
+/**
+ * @description Подготовка к работе слайдера
+ */
+function initModal() {
   if (modal) {
     modalContent = document.createElement('div');
     modalContent.className = 'modal__content';
@@ -11,8 +14,12 @@ function init() {
   }
 }
 
-init();
+initModal();
 
+/**
+ * @description Функция открытия модального окна
+ * @param {Object} data - Данные для отображения
+ */
 export function openModal(data) {
   const { name, img, type, breed, description, age, inoculations, diseases, parasites } = data;
 
@@ -52,7 +59,7 @@ export function openModal(data) {
     </li>
     <li class="modal__specifications-text">
       <span>Parasites:</span>
-      <span>${inoculations.join(', ')}</span>
+      <span>${parasites.join(', ')}</span>
     </li>
   </ul>
 </div>`;
@@ -61,8 +68,11 @@ export function openModal(data) {
   document.body.classList.add('lock');
 }
 
+/**
+ * @description Функция закрытия модального окна
+ * @param {Event} event - Событие click
+ */
 function closeModal(event) {
-  console.log(event.target.className);
   if (event.target.className === 'modal open' || event.target.closest('.modal__button')) {
     modal.classList.remove('open');
     document.body.classList.remove('lock');

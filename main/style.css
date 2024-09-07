@@ -346,6 +346,8 @@
 .slider__slide {
   justify-content: center;
   gap: 90px;
+
+  flex-shrink: 0;
 }
 
 .slider__arrow--direction-left {
