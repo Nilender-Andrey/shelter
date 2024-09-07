@@ -15,7 +15,7 @@ export default [
   {
     id: 2,
     name: 'Sophia',
-    img: '../../assets/img/pets-sophia.jpg',
+    img: '../assets/img/pets-sophia.jpg',
     type: 'Dog',
     breed: 'Shih tzu',
     description:
@@ -28,7 +28,7 @@ export default [
   {
     id: 3,
     name: 'Woody',
-    img: '../../assets/img/pets-woody.jpg',
+    img: '../assets/img/pets-woody.jpg',
     type: 'Dog',
     breed: 'Golden Retriever',
     description:
@@ -41,7 +41,7 @@ export default [
   {
     id: 4,
     name: 'Scarlett',
-    img: '../../assets/img/pets-scarlet.jpg',
+    img: '../assets/img/pets-scarlet.jpg',
     type: 'Dog',
     breed: 'Jack Russell Terrier',
     description:
@@ -54,7 +54,7 @@ export default [
   {
     id: 5,
     name: 'Katrine',
-    img: '../../assets/img/pets-katrine.jpg',
+    img: '../assets/img/pets-katrine.jpg',
     type: 'Cat',
     breed: 'British Shorthair',
     description:
@@ -67,7 +67,7 @@ export default [
   {
     id: 6,
     name: 'Timmy',
-    img: '../../assets/img/pets-timmy.jpg',
+    img: '../assets/img/pets-timmy.jpg',
     type: 'Cat',
     breed: 'British Shorthair',
     description:
@@ -80,7 +80,7 @@ export default [
   {
     id: 7,
     name: 'Freddie',
-    img: '../../assets/img/pets-freddie.jpg',
+    img: '../assets/img/pets-freddie.jpg',
     type: 'Cat',
     breed: 'British Shorthair',
     description:
@@ -93,7 +93,7 @@ export default [
   {
     id: 8,
     name: 'Charly',
-    img: '../../assets/img/pets-charly.png',
+    img: '../assets/img/pets-charly.png',
     type: 'Dog',
     breed: 'Jack Russell Terrier',
     description:
