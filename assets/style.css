@@ -1,3 +1,5 @@
+@import url('modal.css');
+
 @font-face {
   font-family: 'Arial';
   src: url('./fonts/arial/arial-regular.ttf');
@@ -8,6 +10,12 @@
   font-family: 'Georgia';
   src: url('./fonts/georgia/georgia-regular.ttf');
   font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url('./fonts/georgia/georgia-bold.ttf');
+  font-weight: 700;
 }
 
 :root {
@@ -41,10 +49,23 @@ html {
 }
 
 body {
-  position: relative;
-
   background: url('../assets/img/noise_transparent.png'),
     radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.content--scroll-disabled {
+  position: fixed;
+  /*  height: 100vh; */
+  overflow: hidden;
 }
 
 img {
@@ -99,12 +120,6 @@ p,
   font-size: 12px;
   font-style: italic;
   line-height: 18px;
-}
-
-.header {
-  position: absolute;
-  width: 100%;
-  overflow: hidden;
 }
 
 .header-wrapper {
@@ -162,7 +177,7 @@ p,
 
 .nav-list__item--active {
   border-bottom: 3px solid var(--color-primary);
-  pointer-events: none;
+  cursor: default;
 }
 
 .link {
@@ -175,7 +190,6 @@ p,
 }
 
 .header--style-secondary {
-  position: relative;
   background-color: var(--color-light-xl);
 }
 
@@ -360,6 +374,7 @@ p,
   background-color: var(--color-light-s);
   border-radius: 9px;
 
+  overflow: hidden;
   cursor: pointer;
   transition: all 0.15s linear;
 }
@@ -404,10 +419,10 @@ p,
   outline: none;
 
   cursor: pointer;
-  transition: 0.5s all linear;
+  transition: 0.25s all linear;
 }
 
-.burger-btn.active {
+.header-wrapper--nav-open .burger-btn {
   transform: rotate(90deg);
 }
 
@@ -435,6 +450,19 @@ p,
 .header--style-secondary .burger-btn:hover .burger-btn__line {
   color: var(--color-dark-l);
   transition: background-color 0.2s;
+}
+
+.backdrop {
+  display: none;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9;
+
+  background-color: #29292999;
 }
 
 @media screen and (max-width: 768px) {
@@ -466,32 +494,34 @@ p,
   .nav {
     position: absolute;
     top: 0;
-    right: -100vw;
+    right: -320px;
+    z-index: 10;
 
-    z-index: 50;
-
-    width: 100vw;
+    width: 320px;
     height: 100vh;
 
-    background-color: #29292999;
-  }
-
-  .nav.open {
-    right: 0;
+    transition: right 0.25s linear;
   }
 
   .nav-list {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 40px;
 
     height: 100%;
-    max-width: 320px;
-    padding: 0 0 0 0;
+    width: 100%;
+    padding: 248px 0 0 0;
     margin-left: auto;
 
     background: var(--color-dark-xl);
+  }
+
+  .header-wrapper--nav-open .nav {
+    right: 0;
+  }
+
+  .header-wrapper--nav-open .backdrop {
+    display: block;
   }
 
   .header--style-secondary .nav-list {
