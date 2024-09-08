@@ -47,15 +47,16 @@ export function debounce(callback, ms) {
  * @returns {Record[]}
  */
 export function getCardsForPagination(petsData) {
-  const getRandomPetCards = getRandomRecordsFunction(petsData);
-
   const result = [];
 
   for (let index = 0; index < 6; index++) {
-    let excludeCards = result.length ? result.slice(-3) : [];
-    let cards = getRandomPetCards(8, excludeCards);
-    result.push(...cards.slice(0, 3), ...excludeCards, ...cards.slice(3));
+    result.push(
+      ...getRandomRecordsFunction(petsData.slice(0, 4))(4, []),
+      ...getRandomRecordsFunction(petsData.slice(-4))(4, [])
+    );
   }
+
+  console.log(result);
 
   return result;
 }
