@@ -10,6 +10,7 @@
 
   display: flex;
   justify-content: center;
+  align-items: center;
 
   background-color: rgba(41, 41, 41, 0.6);
 
@@ -27,9 +28,6 @@
 }
 
 .modal__content {
-  position: absolute;
-  top: 188px;
-
   display: flex;
 
   width: calc(100% - 140px);
