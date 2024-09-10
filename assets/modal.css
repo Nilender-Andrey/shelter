@@ -156,13 +156,12 @@
 
 @media screen and (max-width: 768px) {
   .modal__content {
-    top: 263px;
     min-height: 350px;
-  }
+    width: calc(100% - 100px);
+   }
 
   .modal__image {
     flex-shrink: 1.6;
-    /*   max-height: 350px; */
     min-width: 200px;
   }
 
@@ -194,7 +193,7 @@
 
   .modal__content {
     top: 221px;
-    width: calc(100% - 80px);
+    width: calc(100% - 40px);
     min-height: fit-content;
   }
 
